@@ -1,0 +1,139 @@
+/* Universal Styles */
+:root {
+  --primaryLightColor: #39c6ab;
+  --primaryDarkColor: #065464;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  direction: rtl;
+  position: relative;
+}
+/* section {
+} */
+section:nth-of-type(n) {
+  background-image: url('../Media/blueCover.jpg');
+}
+section:nth-of-type(2n) {
+  background-image: url('../Media/whiteCover.jpg');
+}
+/* section > .container {
+
+} */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  header {
+    width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  header {
+    width: 800px;
+  }
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #065464a9;
+  box-shadow: inset 4px 4px 10px rgba(72, 108, 152, 0.25), inset -4px -4px 10px rgba(72, 108, 152, 0.25);
+  padding: 5px 20px;
+  border-radius: 33px;
+}
+header img {
+  height: 56px;
+  width: 56px;
+}
+header i {
+  display: none !important;
+  cursor: pointer;
+  color: var(--primaryLightColor);
+  font-size: 20px;
+}
+header nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  position: relative;
+  border-radius: 14px;
+
+}
+header nav a::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsla(190, 89%, 21%, 0.85);
+  border-radius: 14px;
+  transition-duration: .3s;
+  width: 0;
+  height: 0;
+}
+header nav a:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap-reverse;
+    width: 325px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  header img {
+    width: 48;
+    height: 48;
+  }
+  header i.fa-bars,
+  header i.fa-x {
+    display: block !important;
+  }
+  header nav {
+    flex-basis: 100%;
+    display: none;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  header nav a {
+    border: 1px solid;
+    flex-basis: 30%;
+  }
+}
+@media (min-width: 769px) {
+  header nav {
+    display: block !important;
+  }
+}
