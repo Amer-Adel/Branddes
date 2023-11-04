@@ -107,7 +107,7 @@ header nav a:hover::before {
 @media (max-width: 768px) {
   header {
     flex-wrap: wrap-reverse;
-    width: 350px;
+    width: 360px;
     padding-top: 0;
     padding-bottom: 0;
   }
