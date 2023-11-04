@@ -107,7 +107,7 @@ header nav a:hover::before {
 @media (max-width: 768px) {
   header {
     flex-wrap: wrap-reverse;
-    width: 325px;
+    width: 335px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -128,7 +128,7 @@ header nav a:hover::before {
     padding-bottom: 10px;
   }
   header nav a {
-    border: 1px solid;
+    border: 1px solid var(--primaryLightColor);
     flex-basis: 30%;
   }
 }
