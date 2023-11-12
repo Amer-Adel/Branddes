@@ -29,8 +29,32 @@
         <p>
           نطمح  لمساعدة العملاء في التغلب على تحديـــــــــــــــــات التسويق وإنشاء محتوى منقطع  النظير.
         </p>
+        <button id="show-pop-up-form">
+          احجز استشارة
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
       </div>
       <img src="Media/home.png" alt="four pieces for puzzle">
+    </div>
+    <div class="pop-up-form-container">
+      <form>
+        <i id="hide-pop-up-form" class="fa-solid fa-x"></i>
+        <label for="shopNam">رابط المتجر</label>
+        <input type="text" name="" id="shopNam">
+        <label for="socialPlats">رابط منصتك الرئيسية</label>
+        <input type="text" name="" id="socialPlat">
+        <label for="projYears">عمر مشروعك</label>
+        <input type="text" name="" id="projYears">
+        <label for="salSiz">حجم المبيعات اخر ثلاث شهور</label>
+        <input type="text" name="" id="salSiz">
+        <label for="adSize">كم الصرف علي الاعلانات</label>
+        <input type="text" name="" id="adSize">
+        <label for="favPlat">افضل منصة لجذب مبيعاتك</label>
+        <input type="text" name="" id="favPlat">
+        <label for="target">هدفك من التواصل معنا</label>
+        <textarea name="" id="target" cols="20" rows="8"></textarea>
+        <input type="submit" value="حجز استشارة">
+      </form>
     </div>
   </section>
   <section id="about">
@@ -133,32 +157,33 @@
       <h2>تواصل معنا</h2>
 
       <div class="grid-foot">
-        <form action="" method="post">
+        <form>
           <input type="text" name="" id="" placeholder="الاسم">
           <input type="tel" name="" id="" placeholder="رقم الهاتف">
           <input type="email" name="" id="" placeholder="البريد الالكتروني">
-          <textarea name="" id="" cols="30" rows="10" placeholder="الرسالة"></textarea>
-          <input type="submit" value="إرسال">
+          <textarea name="" id="" rows="10" placeholder="الرسالة"></textarea>
+          <button type="submit">إرسال</button>
         </form>
   
         <div class="social-platforms">
-          <div class="platform">
+          <a class="platform" href="https://twitter.com/branddes_sa">
             <i class="fa-brands fa-x-twitter"></i>
-          </div>
-          <div class="platform">
+          </a>
+          <a class="platform" href="https://www.instagram.com/branddes_sa">
             <i class="fa-brands fa-instagram"></i>
-          </div>
-          <div class="platform">
+          </a>
+          <a class="platform" href="https://wa.me/+966556533532">
             <i class="fa-brands fa-whatsapp"></i>
-          </div>
-          <div class="platform">
+          </a>
+          <a class="platform">
             <i class="fa-brands fa-tiktok"></i>
-          </div>
+          </a>
         </div>
       </div>
 
     </div>
   </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
