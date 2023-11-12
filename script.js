@@ -1,3 +1,4 @@
+// Show nav menu on phone screens
 if (window.screen.width < 768) {
   let navMenu = document.querySelector("nav");
 
@@ -17,7 +18,26 @@ if (window.screen.width < 768) {
     }
 }
 
+// Show and hide pop-up consultation Form
+let popUpForm = document.querySelector(".pop-up-form-container");
+document.querySelector("#hide-pop-up-form").onclick = () => popUpForm.style.display = "none";
+document.querySelector("#show-pop-up-form").onclick = () => popUpForm.style.display = "flex";
 
-
-
+// Send email from contact form
+document.querySelector("footer form").onsubmit = () => {
+  Email.send({
+    SecureToken : "",
+    To : 'them@website.com',
+    From : document.getElementById("").value,
+    Subject : "This is the subject",
+    Body : "Name: " + document.getElementById("").value
+        +  "<br> Phone: "
+  }).then(
+    message => alert("تم الارسال بنجاح")
+  );
   
+  reset();
+  return false;
+}
+
+// Send consultation from pop-up form
